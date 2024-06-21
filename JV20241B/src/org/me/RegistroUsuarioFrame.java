@@ -15,10 +15,9 @@ public class RegistroUsuarioFrame extends JFrame {
     public RegistroUsuarioFrame() {
         super("Registrar Novo Usuário");
 
-        setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS)); // Layout BoxLayout vertical
-        add(Box.createVerticalStrut(10)); // Espaçamento entre componentes
+        setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS)); 
+        add(Box.createVerticalStrut(10)); 
 
-        // Rótulo e campo de novo usuário
         JPanel panelNovoUsuario = new JPanel(new FlowLayout(FlowLayout.LEFT));
         panelNovoUsuario.add(new JLabel("Novo Usuário:"));
         txtNovoUsuario = new JTextField(30);
@@ -27,7 +26,6 @@ public class RegistroUsuarioFrame extends JFrame {
         panelNovoUsuario.add(txtNovoUsuario);
         add(panelNovoUsuario);
 
-        // Rótulo e campo de nova senha
         JPanel panelNovaSenha = new JPanel(new FlowLayout(FlowLayout.LEFT));
         panelNovaSenha.add(new JLabel("Nova Senha:"));
         txtNovaSenha = new JPasswordField(30);
@@ -36,7 +34,6 @@ public class RegistroUsuarioFrame extends JFrame {
         panelNovaSenha.add(txtNovaSenha);
         add(panelNovaSenha);
 
-        // Rótulo e campo de confirmar senha
         JPanel panelConfirmarSenha = new JPanel(new FlowLayout(FlowLayout.LEFT));
         panelConfirmarSenha.add(new JLabel("Confirmar Senha:"));
         txtConfirmarSenha = new JPasswordField(30);
@@ -45,7 +42,6 @@ public class RegistroUsuarioFrame extends JFrame {
         panelConfirmarSenha.add(txtConfirmarSenha);
         add(panelConfirmarSenha);
 
-        // Botão Registrar
         JPanel panelBtnRegistrar = new JPanel(new FlowLayout(FlowLayout.CENTER));
         btnRegistrar = new JButton("Registrar");
         btnRegistrar.addActionListener(new ActionListener() {
@@ -55,24 +51,21 @@ public class RegistroUsuarioFrame extends JFrame {
             }
         });
         panelBtnRegistrar.add(btnRegistrar);
-        add(Box.createVerticalStrut(15)); // Espaçamento abaixo do botão
+        add(Box.createVerticalStrut(15));
         add(panelBtnRegistrar);
 
-        add(Box.createVerticalStrut(10)); // Espaçamento inferior
+        add(Box.createVerticalStrut(10)); 
 
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        setSize(400, 250); // Ajustar tamanho da janela
+        setSize(400, 250); 
         setLocationRelativeTo(null);
         setVisible(true);
     }
 
     private void registrarNovoUsuario() {
-        // Implementar lógica de registro do novo usuário aqui
-        // (ex: salvar em banco de dados, enviar email de confirmação, etc.)
-
         JOptionPane.showMessageDialog(this, "Usuário registrado com sucesso!", "Registrar Novo Usuário", JOptionPane.INFORMATION_MESSAGE);
         limparCampos();
-        dispose(); // Fecha a janela após o registro bem-sucedido
+        dispose(); 
     }
 
     private void limparCampos() {

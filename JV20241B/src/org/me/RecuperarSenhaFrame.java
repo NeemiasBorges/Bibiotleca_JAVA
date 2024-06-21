@@ -17,7 +17,6 @@ public class RecuperarSenhaFrame extends JFrame {
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(10, 10, 10, 10);
 
-        // Rótulo e campo de e-mail
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.anchor = GridBagConstraints.WEST;
@@ -29,7 +28,6 @@ public class RecuperarSenhaFrame extends JFrame {
         txtEmail = new JTextField(20);
         add(txtEmail, gbc);
 
-        // Botão Enviar
         gbc.gridx = 0;
         gbc.gridy = 1;
         gbc.gridwidth = 3;
@@ -40,12 +38,12 @@ public class RecuperarSenhaFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JOptionPane.showMessageDialog(RecuperarSenhaFrame.this, "Solicitação de recuperação de senha enviada para " + txtEmail.getText(), "Recuperar Senha", JOptionPane.INFORMATION_MESSAGE);
-                dispose(); // Fecha a janela após enviar a solicitação (simulado)
+                dispose(); 
             }
         });
         add(btnEnviar, gbc);
 
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Fechar apenas a janela atual
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); 
         setSize(400, 150);
         setLocationRelativeTo(null);
         setVisible(true);

@@ -20,7 +20,6 @@ public class LoginFrame extends JFrame {
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(10, 10, 10, 10);
 
-        // Rótulo e campo de usuário
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.anchor = GridBagConstraints.WEST;
@@ -32,7 +31,6 @@ public class LoginFrame extends JFrame {
         txtUsuario = new JTextField(20);
         add(txtUsuario, gbc);
 
-        // Rótulo e campo de senha
         gbc.gridx = 0;
         gbc.gridy = 1;
         gbc.gridwidth = 1;
@@ -45,7 +43,6 @@ public class LoginFrame extends JFrame {
         txtSenha = new JPasswordField(20);
         add(txtSenha, gbc);
 
-        // Botão Login
         gbc.gridx = 0;
         gbc.gridy = 2;
         gbc.gridwidth = 3;
@@ -60,7 +57,6 @@ public class LoginFrame extends JFrame {
         });
         add(btnLogin, gbc);
 
-        // Botão Recuperar Senha
         gbc.gridx = 0;
         gbc.gridy = 3;
         gbc.gridwidth = 1;
@@ -74,7 +70,6 @@ public class LoginFrame extends JFrame {
         });
         add(btnRecuperarSenha, gbc);
 
-        // Botão Registrar
         gbc.gridx = 2;
         gbc.gridwidth = 1;
         btnRegistrar = new JButton("Registrar");
@@ -87,7 +82,7 @@ public class LoginFrame extends JFrame {
         add(btnRegistrar, gbc);
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(400, 250); // Aumentei a altura para caber os novos botões
+        setSize(400, 250); 
         setLocationRelativeTo(null);
         setVisible(true);
     }
@@ -101,7 +96,7 @@ public class LoginFrame extends JFrame {
         } else if (usuario.equals("admin") && senha.equals("adm123")) {
             JOptionPane.showMessageDialog(this, "Login bem-sucedido!", "Login", JOptionPane.INFORMATION_MESSAGE);
             abrirMain();
-            dispose(); // Fecha a janela de login após o login bem-sucedido
+            dispose(); 
         } else {
             JOptionPane.showMessageDialog(this, "Usuário ou senha inválidos.", "Erro de Autenticação", JOptionPane.ERROR_MESSAGE);
         }

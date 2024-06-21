@@ -152,7 +152,6 @@ public class FormProduto extends JPanel {
         String precoText = txtPreco.getText();
         String quantidadeText = txtQuantidade.getText();
 
-        // Validações
         if (nome.isEmpty() || nome.length() > 100) {
             JOptionPane.showMessageDialog(this, "Nome deve ter entre 1 e 100 caracteres.", "Erro de Validação", JOptionPane.ERROR_MESSAGE);
             return;
@@ -195,7 +194,6 @@ public class FormProduto extends JPanel {
 
         limparFormulario();
 
-        // Verifica se o pai é uma instância de Main e atualiza a lista de produtos
         Component parent = SwingUtilities.getAncestorOfClass(Main.class, this);
         if (parent instanceof Main) {
             Main mainFrame = (Main) parent;

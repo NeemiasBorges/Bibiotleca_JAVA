@@ -18,7 +18,6 @@ public class CadastroDeposito extends JFrame {
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(10, 10, 10, 10);
 
-        // Rótulo e campo de nome
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.anchor = GridBagConstraints.WEST;
@@ -30,7 +29,6 @@ public class CadastroDeposito extends JFrame {
         txtNome = new JTextField(20);
         add(txtNome, gbc);
 
-        // Rótulo e campo de localização
         gbc.gridx = 0;
         gbc.gridy = 1;
         gbc.gridwidth = 1;
@@ -43,7 +41,6 @@ public class CadastroDeposito extends JFrame {
         txtLocalizacao = new JTextField(20);
         add(txtLocalizacao, gbc);
 
-        // Botão Salvar
         gbc.gridx = 0;
         gbc.gridy = 2;
         gbc.gridwidth = 3;
@@ -68,10 +65,9 @@ public class CadastroDeposito extends JFrame {
         String nome = txtNome.getText();
         String localizacao = txtLocalizacao.getText();
 
-        // Aqui você pode realizar a lógica para salvar o depósito
         JOptionPane.showMessageDialog(this, "Depósito salvo com sucesso!", "Cadastro de Depósito", JOptionPane.INFORMATION_MESSAGE);
         limparCampos();
-        dispose(); // Fecha a janela após salvar
+        dispose(); 
     }
 
     private void limparCampos() {
