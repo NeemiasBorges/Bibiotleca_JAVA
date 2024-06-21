@@ -68,7 +68,7 @@ Este repositório contém a documentação do Software de Gerenciamento de Estoq
 2. Clique em "Enviar".
 
 ## Repositório no Git
-- [Link para o Repositório](coloque-aqui-o-link-do-seu-repositório)
+- [Link para o Repositório](https://github.com/NeemiasBorges/SGE_JAVA)
 
 ## Script do Banco de Dados
 ```sql
