@@ -1,4 +1,4 @@
-# Sistema de Gerenciamento de Estoque
+# Sistema de Gerenciamento de Estoque [For study purposes]
 
 Este repositório contém a documentação do Software de Gerenciamento de Estoque, uma aplicação desenvolvida em Java para facilitar o controle e a gestão de estoques de produtos em empresas.
 
